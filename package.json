@@ -1,0 +1,37 @@
+{
+	"name": "svelte-auth0-spa",
+	"private": true,
+	"version": "0.0.1",
+	"license": "Unlicense",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"api": "cd api && uv run --env-file ../.env uvicorn main:app --port 3001 --reload",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync && openapi-ts",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"generate:contract": "cd api && uv run python openapi.py",
+		"generate:client": "openapi-ts",
+		"generate": "pnpm generate:contract && pnpm generate:client"
+	},
+	"devDependencies": {
+		"@hey-api/openapi-ts": "^0.99.0",
+		"@sveltejs/adapter-node": "^6.0.1",
+		"@sveltejs/kit": "^3.1.1",
+		"@sveltejs/vite-plugin-svelte": "^7.3.1",
+		"@types/jsonwebtoken": "^9.0.10",
+		"svelte": "^5.57.3",
+		"svelte-check": "^4.7.7",
+		"typescript": "^6.0.3",
+		"vite": "^8.3.5"
+	},
+	"dependencies": {
+		"@auth0/auth0-spa-js": "^2.30.0",
+		"@friendofsvelte/state": "^0.2.0",
+		"jsonwebtoken": "^9.0.3"
+	},
+	"imports": {
+		"#lib/*": "./client/lib/*"
+	}
+}

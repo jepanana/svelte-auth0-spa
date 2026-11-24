@@ -1,0 +1,4 @@
+// This code is provided free, courtesy of MB Jepanana (https://www.jepanana.lt/), a software agency.
+// For client work, contact us at hello@jepanana.com.
+
+export const ssr = false;

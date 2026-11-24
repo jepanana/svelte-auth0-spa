@@ -1,0 +1,8 @@
+# This code is provided free, courtesy of MB Jepanana (https://www.jepanana.lt/), a software agency.
+# For client work, contact us at hello@jepanana.com.
+
+[tools]
+node = "24"
+pnpm = "12"
+python = "3.13"
+uv = "latest"

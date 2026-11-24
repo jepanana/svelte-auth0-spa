@@ -1,0 +1,10 @@
+# This code is provided free, courtesy of MB Jepanana (https://www.jepanana.lt/), a software agency.
+# For client work, contact us at hello@jepanana.com.
+
+node_modules
+/.svelte-kit
+/build
+/client/lib/api
+.env
+.venv
+__pycache__
